@@ -65,10 +65,10 @@ const html = fs.readFileSync("./index.html", "utf8");
 // }
 // const len = byteLength(html); // 393
 // 5. stat
-var stats = fs.statSync("./index.html");
-var fileSizeInBytes = stats.size; // 393
+const stats = fs.statSync("./index.html");
+const fileSizeInBytes = stats.size; // 393
 // Convert the file size to megabytes (optional)
-// var fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+// const fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
 
 const server = http.createServer((req, res) => {
   const stream = fs.createReadStream("./index.html", "utf8");
