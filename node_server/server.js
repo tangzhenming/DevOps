@@ -1,7 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 
-// 1. 响应字符串
+// 1. 响应字符串 ==============================================================
 // const html = `
 // <!DOCTYPE html>
 // <html lang="en">
@@ -20,14 +20,18 @@ const fs = require("fs");
 // </html>
 // `;
 
-// 2. 响应系统文件
+// const server = http.createServer((req, res) => {
+//   res.end(html);
+// });
+
+// 2. 响应系统文件 ============================================================
 // const html = fs.readFileSync("./index.html", "utf8");
 
 // const server = http.createServer((req, res) => {
 //   res.end(html);
 // });
 
-// 3. 以流的形式读取并响应系统文件
+// 3. 以流的形式读取并响应系统文件 ===============================================
 const server = http.createServer((req, res) => {
   const stream = fs.createReadStream("./index.html", "utf8");
   stream.pipe(res);
