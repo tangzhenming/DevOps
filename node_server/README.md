@@ -1,7 +1,25 @@
-假设此时你有一台拥有公共 IP 地址的服务器，在这台服务器使用 nodejs 运行刚才的代码，则外网的人可通过 IP:3000 访问该页面。那这可理解为部署，使得所有人都可以访问。
+# 实现静态资源服务器
 
-假设你将该服务器作为你的工作环境，通过 npm start 运行代码并通过，所有人都可访问他，即可视为部署成功。看来你离所有人都可访问的部署只差一台拥有公共 IP 的服务器。
+[gogoserver](https://github.com/tangzhenming/gogoserver)
 
-实际上，有极少数小微企业在生产环境中就是直接 ssh 进生产环境服务器，并通过 npm start 部署成功后，通过 IP 与端口号的方式进行访问。当然通过 IP 地址访问的项目一般也非公开项目，如果公开使用域名的话，则用 nginx 配置域名加一层反向代理。
+## 功能支持
 
-不管怎么说，你现在已经可以通过裸机(宿主机)部署一个简单的前端应用了。
+- [x] 1. 基于 stream 返回数据，并能给出正确的 Content-Length
+- [x] 2. 作为一个命令行工具发布
+- [x] 3. 通过命令行指定端口号
+- [x] 4. 通过命令行读取目录
+- [x] 5. 支持 404
+- [ ] 6. 支持 trailingSlash
+- [ ] 7. 支持 cleanUrls
+- [ ] 8. 支持 rewrite
+- [ ] 9. 支持 redirect
+- [ ] ...
+
+## Q&A
+
+1. 什么是 rewrite 和 redirect？
+
+## 参考资料
+
+1. [serve-handler](https://github.com/vercel/serve-handler)
+2. [mini-code](https://github.com/shfshanyue/mini-code/tree/master/code/serve)
