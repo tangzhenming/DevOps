@@ -6,3 +6,15 @@ services:
       dockerfile: cra.Dockerfile
     ports:
       - "8000:3000"
+  cra_refactor_time:
+    build: 
+      context: .
+      dockerfile: cra_refactor_time.Dockerfile
+    ports:
+      - "8000:3000"
+  cra_refactor_size:
+    build: 
+      context: .
+      dockerfile: cra_refactor_size.Dockerfile
+    ports:
+      - "8000:80"
