@@ -1,3 +1,5 @@
+# brotli 模块的 Dockerfile 书写也可以参考这篇 https://www.iszy.cc/posts/e/
+
 FROM nginx:mainline as builder
 
 # ENABLED_MODULES 就是从 docker-compose 的 args 中传入的变量：ENABLED_MODULES: brotli
