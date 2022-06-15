@@ -11,10 +11,10 @@ services:
       context: .
       dockerfile: cra_refactor_time.Dockerfile
     ports:
-      - "8000:3000"
+      - "8001:3000"
   cra_refactor_size:
     build: 
       context: .
       dockerfile: cra_refactor_size.Dockerfile
     ports:
-      - "8000:80"
+      - "8002:80"
