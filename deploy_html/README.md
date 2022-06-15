@@ -28,7 +28,7 @@
 6.  docker-compose
     1.  docker-compose up：启动项目
         1.  --build：每次启动时都重新构建镜像
-        2.  [service name]: 启动单个 service
+        2.  [service name]: 后接 service name ，启动单个或多个 service
 7.  示例
     1.  `docker run -it --rm nginx:alpine sh`: 启动 nginx:alpine 容器，并进入容器，--rm 参数表示容器退出后自动删除
     2.  `docker run -it --rm -p 3000:80 nginx:alpine`: -p 指定容器的端口映射，3000:80 表示容器的 80 端口映射到宿主机的 3000 端口
