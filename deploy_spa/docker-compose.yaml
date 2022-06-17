@@ -18,3 +18,8 @@ services:
       dockerfile: cra_refactor_size.Dockerfile
     ports:
       - "8002:80"
+  cra_refactor:
+    build:
+      dockerfile: cra_refactor.Dockerfile
+    ports:
+      - "8003:80"
