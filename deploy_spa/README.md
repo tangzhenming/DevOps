@@ -108,3 +108,11 @@ cra 中构建出来的静态资源在 build 目录中，可以通过 `npx serve 
 ## Dockerfile 中 CMD 与 RUN 有什么区别？
 
 RUN 在构建阶段执行，每执行一次会为镜像添加一个层，而 CMD 只在容器启动时执行(而且还不一定执行，它只是容器启动时默认的执行命令)
+
+## 静态资源优化
+
+1. 使用 terser 压缩 Javascript 资源
+2. 使用 cssnano 压缩 CSS 资源
+3. 使用 sharp/CDN 压缩 Image 资源或转化为 Webp
+4. 使用 webpack 将小图片转化为 DataURI
+5. 使用 webpack 进行更精细的分包，避免一行代码的改动使大量文件的缓存失效
