@@ -8,7 +8,7 @@ cra 中构建出来的静态资源在 build 目录中，可以通过 `npx serve 
 
 [在 docker 中使用 serve 运行单页应用](https://github.com/tangzhenming/DevOps/blob/main/deploy_spa/cra.Dockerfile)
 
-## 构建优化
+## 通过构建缓存与多阶段构建进行优化
 
 1. [利用 docker 的构建缓存，减少构建时间](https://github.com/tangzhenming/DevOps/blob/main/deploy_spa/cra_refactor_time.Dockerfile)
    1. 前端项目构建时间主要消耗在 npm install 和 npm build
@@ -18,6 +18,8 @@ cra 中构建出来的静态资源在 build 目录中，可以通过 `npx serve 
 2. [利用 docker 进行多阶段构建，减小构建体积](https://github.com/tangzhenming/DevOps/blob/main/deploy_spa/cra_refactor_size.Dockerfile)
    1. 静态资源完全不需要依赖于 node.js 环境进行服务化，而 node.js 环境将造成极大的资源浪费
    2. 使用 node 镜像对单页应用进行构建，生成静态资源后，再选择体积更小的 nginx 镜像对静态资源进行服务化
+
+## [单页应用的客户端路由处理及长期缓存优化](https://github.com/tangzhenming/DevOps/tree/main/deploy_spa/cra_final.Dockerfile)
 
 ## [Docker 多阶段构建原理和使用场景](https://segmentfault.com/a/1190000016137548)
 
