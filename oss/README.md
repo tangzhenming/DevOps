@@ -38,4 +38,6 @@ $ ossutil cp -rf --meta Cache-Control:max-age=31536000 build/static oss://tang-c
 
 ## [Mac 环境变量配置](https://www.jianshu.com/p/2af08672f55c)
 
+[usr/bin 以及 usr/local/bin](https://www.jianshu.com/p/c74d1446da7c)
+
 ## 在 oss 控制台删除了静态资源后，本地再 build docker 镜像时会发现镜像都命中了缓存，所以不会触发 oss 的上传脚本命令，使用 `docker-compose build --no-cache oss` 重新 build 一次即可。
