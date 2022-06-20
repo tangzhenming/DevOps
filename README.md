@@ -8,7 +8,3 @@
 - [基于 docker 部署单页应用](https://github.com/tangzhenming/DevOps/tree/main/deploy_spa)
 - [将静态资源部署到 OSS/CDN](https://github.com/tangzhenming/DevOps/tree/main/oss)
 - ...
-
-## Docker 镜像加速
-
-[Docker 镜像加速-菜鸟教程](https://www.runoob.com/docker/docker-mirror-acceleration.html)

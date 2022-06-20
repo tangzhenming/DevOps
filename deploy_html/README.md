@@ -38,3 +38,7 @@
 1. 我们为什么可以直接在 node 镜像中使用 yarn 命令行工具？
 
 https://hub.docker.com/layers/node/library/node/lts-alpine3.16/images/sha256-9da65f99264be2a78682095c4789b3d8cab12e0012def7d937d7125ed6e7695c?context=explore
+
+## Docker 镜像加速
+
+[Docker 镜像加速-菜鸟教程](https://www.runoob.com/docker/docker-mirror-acceleration.html)
