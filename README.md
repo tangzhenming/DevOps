@@ -11,3 +11,7 @@
 - [对象存储——将静态资源部署到 OSS/CDN](https://github.com/tangzhenming/DevOps/tree/main/oss)
 - [服务网关——traefik 搭建](https://github.com/tangzhenming/DevOps/tree/main/traefik)
 - ...
+
+## Reference
+
+[前端部署十五篇](https://q.shanyue.tech/deploy/)
