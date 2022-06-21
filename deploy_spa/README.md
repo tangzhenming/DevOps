@@ -118,3 +118,9 @@ RUN 在构建阶段执行，每执行一次会为镜像添加一个层，而 CMD
 3. 使用 sharp/CDN 压缩 Image 资源或转化为 Webp
 4. 使用 webpack 将小图片转化为 DataURI
 5. 使用 webpack 进行更精细的分包，避免一行代码的改动使大量文件的缓存失效
+
+## COPY 指令
+
+https://blog.51cto.com/u_12020737/4539258
+
+https://blog.51cto.com/u_15076224/4304416
