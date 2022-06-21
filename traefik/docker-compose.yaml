@@ -1,0 +1,32 @@
+version: "3"
+services:
+  reverse-proxy:
+    # 创建 traefik 容器并启动 traefik 后会默认新建一个 traefik_network 网络：命令行打印 Creating network "traefik_default" with the default driver
+    image: traefik:v2.5
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - ./traefik.toml:/etc/traefik/traefik.toml
+      - ./acme.json:/acme.json # acme 文件需要给到所有者读写权限 chmod 600
+      - ./log:/log
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: traefik
+    env_file: .env
+    labels:
+      - "traefik.http.routers.api.rule=Host(`traefik.shanyue.local`)"
+      - "traefik.http.routers.api.service=api@internal"
+
+  # 暴露了一个 http 服务，主要提供一些 header 以及 ip 信息
+  whoami:
+    image: containous/whoami
+    labels:
+      # 配置了容器的 labels，设置该服务的 Host 为 whoami.shanyue.local (进行域名访问)，给 traefik 提供标记
+      - "traefik.http.routers.whoami.rule=Host(`whoami.shanyue.local`)"
+
+# 使用已存在的 traefik 的 network，名字就是上面 traefik 服务启动时默认创建的 network 名字
+networks:
+  default:
+    external:
+      name: traefik_default
