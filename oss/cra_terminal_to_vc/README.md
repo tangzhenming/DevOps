@@ -1,5 +1,7 @@
 # 使用 vercel 部署项目
 
+`npm i -g vercel` && `vercel --prod`
+
 https://juejin.cn/post/7065115103720374302
 
 https://vercel.com/docs/cli
