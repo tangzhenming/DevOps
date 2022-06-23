@@ -11,3 +11,45 @@
 {"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-21T10:23:38Z"}
 {"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-21T10:23:38Z"}
 {"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-21T10:23:38Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2022-06-23T06:02:37Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:02:37Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2022-06-23T06:02:37Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2022-06-23T06:02:37Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2022-06-23T06:02:37Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:02:37Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:03:15Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:03:15Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:03:15Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:03:15Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:03:15Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:03:15Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2022-06-23T06:03:33Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2022-06-23T06:03:33Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:03:33Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2022-06-23T06:03:33Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2022-06-23T06:03:33Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:03:33Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:03:35Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:03:35Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:03:35Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:03:35Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:03:35Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:03:35Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:04:04Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2022-06-23T06:04:04Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2022-06-23T06:04:04Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:04:04Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2022-06-23T06:04:04Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2022-06-23T06:04:04Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:04:05Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:04:05Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:04:06Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:04:06Z"}
+{"entryPointName":"metrics","level":"error","msg":"entryPoint \"metrics\" doesn't exist","routerName":"prometheus@internal","time":"2022-06-23T06:04:06Z"}
+{"level":"error","msg":"no valid entryPoint for this router","routerName":"prometheus@internal","time":"2022-06-23T06:04:06Z"}
+{"entryPointName":"websecure","level":"error","msg":"accept tcp [::]:443: use of closed network connection","time":"2022-06-23T06:32:09Z"}
+{"entryPointName":"traefik","level":"error","msg":"accept tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:32:09Z"}
+{"entryPointName":"web","level":"error","msg":"accept tcp [::]:80: use of closed network connection","time":"2022-06-23T06:32:09Z"}
+{"entryPointName":"websecure","level":"error","msg":"close tcp [::]:443: use of closed network connection","time":"2022-06-23T06:32:09Z"}
+{"entryPointName":"traefik","level":"error","msg":"close tcp [::]:8080: use of closed network connection","time":"2022-06-23T06:32:09Z"}
+{"entryPointName":"web","level":"error","msg":"close tcp [::]:80: use of closed network connection","time":"2022-06-23T06:32:09Z"}

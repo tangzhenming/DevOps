@@ -27,6 +27,9 @@ services:
 
 # 使用已存在的 traefik 的 network，名字就是上面 traefik 服务启动时默认创建的 network 名字
 networks:
-  default:
-    external:
-      name: traefik_default
+  # default:
+  #   external:
+  #     name: traefik_default
+  # WARN[0000] network default: network.external.name is deprecated in favor of network.name
+  network:
+    name: traefik_default
