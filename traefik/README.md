@@ -2,7 +2,7 @@
 
 ## 搭建
 
-基于 docker 镜像即可搭建 traefik 。
+基于 docker 镜像即可搭建 traefik ，[搭建示例](https://github.com/tangzhenming/DevOps/blob/main/traefik/example/)
 
 ## Error
 
