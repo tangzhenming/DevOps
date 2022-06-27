@@ -1,0 +1,6 @@
+version: "3"
+services:
+  whoami:
+    image: containous/whoami
+    labels:
+      - "traefik.http.routers.whoami.rule=Host(`traefik.tangzhenming.com`)" # 如果域名还没有备案或者认证，建议这里先指向公网 IP
