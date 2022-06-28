@@ -1,4 +1,6 @@
-# [使用 ossutil 以命令行的方式管理 oss 数据](https://help.aliyun.com/document_detail/50451.html)
+# 使用 ossutil 以命令行的方式管理 oss 数据
+
+[ossutil 官方安装及使用教程](https://help.aliyun.com/document_detail/50451.html)
 
 ```shell
 # 将资源 build 上传到 OSS Bucket tang-cra 中
