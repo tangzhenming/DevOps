@@ -11,6 +11,6 @@ services:
       # webUI 暴露的端口(必须制定 --api.insecure=true 才可以访问)
       - "8080:8080"
     volumes:
-      # 指定 docker 的 sock 文件来让 traefik 获取 docker 的事件，从而实现动态负载均衡
-      # 服务发现也是通过这里实现
+      # 指定 docker 的 sock 文件来让 traefik 获取 docker 的事件
+      # 基于 docker 的事件可以实现动态负载均衡、列举同一网络下所有容器信息等
       - /var/run/docker.sock:/var/run/docker.sock

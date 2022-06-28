@@ -3,4 +3,12 @@ services:
   whoami:
     image: containous/whoami
     labels:
-      - "traefik.http.routers.whoami.rule=Host(`traefik.tangzhenming.com`)" # 如果域名还没有备案或者认证，建议这里先指向公网 IP
+      # 配置自定义域名
+      # 如果域名还没有备案或者认证，可以先指向公网 IP
+      - "traefik.http.routers.whoami.rule=Host(`whoami.tangzhenming.com`)"
+      # 配置多域名
+      # nginx https://nginx.org/en/docs/http/server_names.html
+      # traefik
+      # traefik.https.routers + name + rule
+      - "traefik.http.routers.whoami-sub.rule=Host(`sub.whoami.tangzhenming.com`)"
+      - "traefik.http.routers.whoami-another.rule=Host(`another.whoami.tangzhenming.com`)"
