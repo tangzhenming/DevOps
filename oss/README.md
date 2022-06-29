@@ -16,11 +16,11 @@
 
 Mac 环境变量加载顺序：
 
-1. /etc/profile：系统全局配置文件
-2. /etc/paths：系统全局配置文件，里面的目录都会被添加到环境变量中
-3. ~/.bash_profile
+1. `/etc/profile`：系统全局配置文件
+2. `/etc/paths`：系统全局配置文件，里面的目录都会被添加到环境变量中
+3. `~/.bash_profile`
 
-   1. 如果 ~/.bash_profile 存在，后面几个文件就会忽略不读
+   1. 如果 `~/.bash_profile` 存在，后面几个文件就会忽略不读
       添加环境变量：
 
       ```bash
@@ -30,12 +30,6 @@ Mac 环境变量加载顺序：
       # .bash_login .profile .bashrc 同上
       ```
 
-   2. 在使用其他 shell 比如 zsh 时，终端默认启动 zsh ，加载的是 ~/.zshrc ，所以 .bash_profile 文件中的环境变量就无法起到作用，需在 ~/.zshrc，增加 source ~/.bash_profile
+   2. 在使用其他 shell 比如 zsh 时，终端默认启动 zsh ，加载的是 `~/.zshrc` ，所以 .bash_profile 文件中的环境变量就无法起到作用，需在 `~/.zshrc`，增加 `source ~/.bash_profile`
 
-4. ~/.bash_login
-5. ~/.profile
-6. ~/.bashrc：始终加载，加载时机为 bash shell 打开的时候
-
-## 禁用 docker 构建缓存
-
-在 oss 控制台删除了静态资源后，本地再 build docker 镜像时会发现镜像都命中了缓存，所以不会触发 oss 的上传脚本命令，使用 `docker-compose build --no-cache oss` 重新 build 一次即可。
+4.` ~/.bash_login` 5. `~/.profile` 6. `~/.bashrc`：始终加载，加载时机为 bash shell 打开的时候
