@@ -32,4 +32,4 @@ Mac 环境变量加载顺序：
 
    2. 在使用其他 shell 比如 zsh 时，终端默认启动 zsh ，加载的是 `~/.zshrc` ，所以 .bash_profile 文件中的环境变量就无法起到作用，需在 `~/.zshrc`，增加 `source ~/.bash_profile`
 
-4.` ~/.bash_login` 5. `~/.profile` 6. `~/.bashrc`：始终加载，加载时机为 bash shell 打开的时候
+4. ` ~/.bash_login` 5. `~/.profile` 6. `~/.bashrc`：始终加载，加载时机为 bash shell 打开的时候
