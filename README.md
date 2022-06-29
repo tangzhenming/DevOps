@@ -1,6 +1,4 @@
-# Development and Operations
-
-[![OSCS Status](https://www.oscs1024.com/platform/badge/tangzhenming/DevOps.svg?size=small)](https://www.oscs1024.com/project/tangzhenming/DevOps?ref=badge_small)
+# Development Operations
 
 ## Catalog
 
