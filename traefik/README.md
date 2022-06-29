@@ -21,6 +21,9 @@ traefik dashboard 不建议在域名中可直接访问。
 可以通过以下 3 种方式来实现 dashboard 的访问控制：
 
 1. [SSH 隧道访问](https://github.com/tangzhenming/Linux/tree/main/remote_connection#ssh-%E9%9A%A7%E9%81%93)
+   1. BasicAuth 认证是对用户名和密码加密，存在被逆编码解密的风险
+   2. 推荐直接配置服务器的安全组入站规则，禁掉对应端口远程访问（比如在我们的例子中，禁掉 8080 ，就不会再走到 traefik 转发给 dashboard 服务这一步了）
+   3. 然后通过公网 IP 就没办法再访问 dashboard 了，我们可以使用 SSH 隧道进行访问，这是非常安全的
 2. 域名 + IP 白名单访问
 3. 域名 + 基本认证访问
    1. [秒懂 HTTP 基本认证(Basic Authentication)](https://zhuanlan.zhihu.com/p/64584734)
