@@ -14,6 +14,30 @@
    3. HTTPS 是 HTTP 协议的一种扩展，它本身并不保传输的证安全性，那么谁来保证安全性呢？在 HTTPS 中，使用传输层安全性(TLS)或安全套接字层(SSL)对通信协议进行加密。也就是 HTTP + SSL(TLS) = HTTPS。
 4. 可配置 AccessLogs ，开启这项配置后， traefik 会自动收集每个服务的请求日志
 
+## traefik dashboard 访问控制
+
+traefik dashboard 不建议在域名中可直接访问。
+
+可以通过以下 3 种方式来实现 dashboard 的访问控制：
+
+1. [SSH 隧道访问](https://github.com/tangzhenming/Linux/tree/main/remote_connection#ssh-%E9%9A%A7%E9%81%93)
+2. 域名 + IP 白名单访问
+3. 域名 + 基本认证访问
+   1. [秒懂 HTTP 基本认证(Basic Authentication)](https://zhuanlan.zhihu.com/p/64584734)
+   2. [Traefik 2 基础授权验证（前篇）](https://blog.csdn.net/soulteary/article/details/110478193)
+   3. 在访问的路由规则被匹配到之后就会将请求首先转发到 Middleware 进行验证身份,最后将请求打到对应的服务上
+   4. [BasicAuth](https://www.qikqiak.com/traefik-book/middlewares/basicauth/)
+   5. [分享：使用 traefik 配置基本认证访问](https://github.com/tangzhenming/DevOps/issues/2)
+   6. [htpasswd 的使用](https://www.jianshu.com/p/f4120aa561cc)
+
+## HTTPS 配置
+
+详细阅读 https://www.qikqiak.com/post/traefik-2.1-101/#acme
+
 ## References
 
 https://www.psvmc.cn/article/2021-02-23-traefik-start.html
+
+https://www.qikqiak.com/traefik-book/
+
+[一文搞懂 Traefik2.1 的使用](https://www.qikqiak.com/post/traefik-2.1-101/#%E4%B8%AD%E9%97%B4%E4%BB%B6)

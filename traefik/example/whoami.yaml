@@ -4,11 +4,19 @@ services:
     image: containous/whoami
     labels:
       # 配置自定义域名
+      # - "traefik.http.routers.whoami.rule=Host(`whoami.tangzhenming.com`)"
       # 如果域名还没有备案或者认证，可以先指向公网 IP
-      - "traefik.http.routers.whoami.rule=Host(`whoami.tangzhenming.com`)"
+      - "traefik.http.routers.whoami.rule=Host(`1.116.142.210`)"
       # 配置多域名
       # nginx https://nginx.org/en/docs/http/server_names.html
       # traefik
       # traefik.https.routers + name + rule
       - "traefik.http.routers.whoami-sub.rule=Host(`sub.whoami.tangzhenming.com`)"
       - "traefik.http.routers.whoami-another.rule=Host(`another.whoami.tangzhenming.com`)"
+      # # 基本认证（基础授权验证）访问配置
+      - "traefik.http.middlewares.test-auth.basicauth.users=tang:$$apr1$$EJReCMcY$$BZrJQ8Lokz9gxYAKlQzhN."
+      - "traefik.http.routers.whoami.middlewares=test-auth@docker"
+# networks:
+#   default:
+#     external:
+#       name: traefik_default

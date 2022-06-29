@@ -24,6 +24,7 @@
     1.  docker-compose up：启动项目
         1.  --build：每次启动时都重新构建镜像
         2.  [service name]: 后接 service name ，启动单个或多个 service
+    2.  [docker-compose 网络设置之 networks](https://blog.csdn.net/Kiloveyousmile/article/details/79830810)
 5.  其他
     1.  docker info：查看 Docker 的配置信息
 6.  示例
