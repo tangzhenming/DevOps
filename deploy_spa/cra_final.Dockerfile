@@ -14,5 +14,6 @@ RUN npm run build
 
 # 选择更小体积的基础镜像
 FROM nginx:alpine
+# 单页应用的客户端路由处理及长期缓存优化
 ADD nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder code/build /usr/share/nginx/html
