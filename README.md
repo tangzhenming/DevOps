@@ -22,9 +22,8 @@
 6. [Dockerfile 中 CMD 与 RUN 有什么区别？](https://github.com/tangzhenming/DevOps/issues/7)
 7. [静态资源优化手段](https://github.com/tangzhenming/DevOps/issues/8)
 8. [Dockerfile 中 COPY 指令与 ADD 指令](https://github.com/tangzhenming/DevOps/issues/9)
-9. [Mac 环境变量配置](https://github.com/tangzhenming/DevOps/issues/10)
-10. [traefik 解决了什么问题](https://github.com/tangzhenming/DevOps/issues/11)
-11. [traefik dashboard 访问控制](https://github.com/tangzhenming/DevOps/issues/12)
+9. [traefik 解决了什么问题](https://github.com/tangzhenming/DevOps/issues/11)
+10. [traefik dashboard 访问控制](https://github.com/tangzhenming/DevOps/issues/12)
 
 ## Reference
 
