@@ -27,6 +27,7 @@
     2.  [docker-compose 网络设置之 networks](https://blog.csdn.net/Kiloveyousmile/article/details/79830810)
 5.  其他
     1.  docker info：查看 Docker 的配置信息
+    2.  docker network ls: 查看 Docker 的网络列表
 6.  示例
     1.  `docker run -it --rm nginx:alpine sh`: 启动 nginx:alpine 容器，并进入容器，--rm 参数表示容器退出后自动删除
     2.  `docker run -it --rm -p 3000:80 nginx:alpine`: -p 指定容器的端口映射，3000:80 表示容器的 80 端口映射到宿主机的 3000 端口
