@@ -16,7 +16,7 @@ services:
       # # 基本认证（基础授权验证）访问配置
       - "traefik.http.middlewares.test-auth.basicauth.users=tang:$$apr1$$EJReCMcY$$BZrJQ8Lokz9gxYAKlQzhN."
       - "traefik.http.routers.whoami.middlewares=test-auth@docker"
-# networks:
-#   default:
-#     external:
-#       name: traefik_default
+networks:
+  default:
+    external:
+      name: traefik_default
