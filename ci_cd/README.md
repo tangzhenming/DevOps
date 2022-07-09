@@ -30,3 +30,7 @@
 
 - [Must not run with sudo](https://stackoverflow.com/questions/66085793/must-not-run-with-sudo)，或者直接把 actions-runner 文件夹下的 config.sh 中的检测代码注释掉
 - 下载并配置完成，[查看 Runner](https://github.com/tangzhenming/DevOps/settings/actions/runners) 发现已经存在自建的 Runner
+
+## 公司的部署方式
+
+基于阿里云的云效 Flow 平台，托管前端源码；使用平台的流水线功能模块，配置流水线源，比如代码仓库、分支，触发事件（代码提交）等；一般就一个任务，这个任务包含三步：1. NodeJS 构建 2. 镜像构建并推送至自定义镜像仓库 3. kubectl 发布（这一步还没看太懂）
