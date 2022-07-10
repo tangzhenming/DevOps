@@ -28,7 +28,7 @@
 
 [自建 Runner](https://github.com/tangzhenming/DevOps/settings/actions/runners/new?arch=x64&os=linux):
 
-- [Must not run with sudo](https://stackoverflow.com/questions/66085793/must-not-run-with-sudo)，或者直接把 actions-runner 文件夹下的 config.sh 中的检测代码注释掉
+- [Must not run with sudo](https://stackoverflow.com/questions/66085793/must-not-run-with-sudo)，`export RUNNER_ALLOW_RUNASROOT=1`, 或者直接把 actions-runner 文件夹下的 config.sh 中的检测代码注释掉
 - 下载并配置完成，[查看 Runner](https://github.com/tangzhenming/DevOps/settings/actions/runners) 发现已经存在自建的 Runner
 
 ## 公司的部署方式
