@@ -1,5 +1,7 @@
 # CICD
 
+[部署项目](https://github.com/tangzhenming/cra-ci-cd)
+
 基础概念：
 
 - CI，Continuous Integration，持续集成。
@@ -21,8 +23,6 @@
 5. 分支需要经过多人同意才能合并到主分支
 
 ## 自建 Github Actions Runner 并完成自动部署
-
-[部署项目](https://github.com/tangzhenming/cra-ci-cd)
 
 [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 
