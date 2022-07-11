@@ -58,3 +58,5 @@
 上面 CI 的时机是在功能分支提交后开启，可以将这个时机延后到 PR 阶段（同时结合 git hooks 在客户端进行代码质量检查）
 
 [优化：将依赖安装作为单独的 job 运行，构建结果共享给其他的 job ；这么做可以节省服务器资源，但多了个 job 切换，这个切换也是需要花费时间的。](https://github.com/tangzhenming/cra-ci-cd/blob/main/.github/workflows/ci_cache.yml)
+
+[Audit](https://github.com/tangzhenming/cra-ci-cd/blob/main/.github/workflows/ci_audit.yml)
