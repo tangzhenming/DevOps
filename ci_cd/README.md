@@ -22,7 +22,7 @@
 4. 分支需要经过 Code Review
 5. 分支需要经过多人同意才能合并到主分支
 
-## 自建 Github Actions Runner 并完成自动部署
+## [自建 Github Actions Runner 作为构建服务器并完成自动部署](https://github.com/tangzhenming/cra-ci-cd/blob/main/.github/workflows/production.yml)
 
 [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 
@@ -34,3 +34,27 @@
 ## 公司的部署方式
 
 基于阿里云的云效 Flow 平台，托管前端源码；使用平台的流水线功能模块，配置流水线源，比如代码仓库、分支，触发事件（代码提交）等；一般就一个任务，这个任务包含三步：1. NodeJS 构建 2. 镜像构建并推送至自定义镜像仓库 3. kubectl 发布（这一步还没看太懂）
+
+## [通过 CI 进行前端质量保障](https://github.com/tangzhenming/cra-ci-cd/blob/main/.github/workflows/ci.yml)
+
+简单的 CI 流程：
+
+1. Install: 依赖安装
+2. Lint: 代码风格检查
+3. Test: 单元测试
+4. Preview: 生成测试环境地址
+
+简单的 Git Workflow 场景：
+
+1. 功能分支开发约定分支名 feature-\* ，功能分支对应一个测试环境地址，如 <branch>.dev.tangzhenming.com
+2. 功能分支测试完毕，确认无误后合并至主分支（生产环境分支），主分支进行生产环境部署
+3. 当生产环境出现问题时，切出 hotfix-\* 分支进行修复
+
+具体时机与做法：
+
+1. 功能分支提交后（CI 阶段），进行 Build、Lint、Test、Preview 等，如未通过 CICD，则无法 Preview，更无法 PR 合并到主分支进行上线
+2. 功能分支通过后（CI 阶段），合并到主分支，进行自动化部署
+
+上面 CI 的时机是在功能分支提交后开启，可以将这个时机延后到 PR 阶段（同时结合 git hooks 在客户端进行代码质量检查）
+
+[优化：将依赖安装作为单独的 job 运行，构建结果共享给其他的 job ；这么做可以节省服务器资源，但多了个 job 切换，这个切换也是需要花费时间的。](https://github.com/tangzhenming/cra-ci-cd/blob/main/.github/workflows/ci_cache.yml)
