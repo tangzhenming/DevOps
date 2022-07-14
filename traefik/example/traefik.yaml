@@ -6,8 +6,9 @@ services:
     # 启用 webUI 并告诉 Traefile 去监听 docker 的容器实例
     command: --api.insecure=true --providers.docker
     ports:
+      - "443:443"
       # traefik 暴露的 http 端口
-      - "8888:80"
+      - "80:80"
       # webUI 暴露的端口(必须制定 --api.insecure=true 才可以访问)
       - "8080:8080"
     volumes:
