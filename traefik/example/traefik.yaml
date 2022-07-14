@@ -2,21 +2,17 @@ version: "3"
 services:
   reverse-proxy:
     image: traefik:v2.5
-    # Enables the web UI and tells Traefik to listen to docker
-    # 启用 webUI 并告诉 Traefile 去监听 docker 的容器实例
     command:
+      - "--api.insecure=true"
       - "--providers.docker"
       - "--entrypoints.web.address=:80"
-      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
-      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      # HTTPS 全局重定向
+      # - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      # - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
       - "--entrypoints.websecure.address=:443"
     ports:
       - "443:443"
-      # traefik 暴露的 http 端口
       - "80:80"
-      # webUI 暴露的端口(必须制定 --api.insecure=true 才可以访问)
       - "8080:8080"
     volumes:
-      # 指定 docker 的 sock 文件来让 traefik 获取 docker 的事件
-      # 基于 docker 的事件可以实现动态负载均衡、列举同一网络下所有容器信息等
       - /var/run/docker.sock:/var/run/docker.sock
